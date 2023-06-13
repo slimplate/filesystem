@@ -46,5 +46,6 @@
     "gray-matter": "^4.0.3",
     "@slimplate/utils": "^0.0.1",
     "match-url-wildcard": "^0.0.4"
-  }
+  },
+  "files": ["dist/**/*"]
 }
