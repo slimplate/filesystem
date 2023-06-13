@@ -1,0 +1,50 @@
+{
+  "name": "@slimplate/filesystem",
+  "version": "0.0.0",
+  "description": "Server-side manager for handling content",
+  "keywords": [
+    "slimplate",
+    "vercel",
+    "cors",
+    "Github"
+  ],
+  "contributors": [
+    {
+      "name": "David Konsumer",
+      "email": "konsumer@jetboystudio.com",
+      "url": "https://konsumer.js.org"
+    },
+    {
+      "name": "Brandon Berning",
+      "email": "berningbran9@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "main": "./dist/slimplate-filesystem.cjs",
+  "module": "./dist/slimplate-filesystem.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/slimplate-filesystem.mjs",
+      "require": "./dist/slimplate-filesystem.cjs"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slimplate/filesystem.git"
+  },
+  "peerDependencies": {
+    "glob": "^10.2.7",
+    "gray-matter": "^4.0.3",
+    "@slimplate/utils": "^0.0.1",
+    "match-url-wildcard": "^0.0.4"
+  },
+  "dependencies": {}
+}
