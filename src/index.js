@@ -2,7 +2,7 @@
 
 import { glob } from 'glob'
 import matter from 'gray-matter'
-import { readFileSync } from 'fs'
+import { readFileSync } from 'node:fs'
 import { tt, loadProcessors } from '@slimplate/utils'
 
 const cache = {}

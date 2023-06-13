@@ -15,7 +15,7 @@ export default defineConfig({
       fileName: (format) => `slimplate-filesystem.${format === 'es' ? 'mjs' : 'cjs'}`
     },
     rollupOptions: {
-      external: [...Object.keys(packageJson.peerDependencies)]
+      external: [...Object.keys(packageJson.dependencies), 'node:fs']
     }
   }
 })
