@@ -1,6 +1,6 @@
 {
   "name": "@slimplate/filesystem",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Server-side manager for handling content",
   "keywords": [
     "slimplate",
@@ -47,5 +47,7 @@
     "@slimplate/utils": "^0.0.1",
     "match-url-wildcard": "^0.0.4"
   },
-  "files": ["dist/**/*"]
+  "files": [
+    "dist/**/*"
+  ]
 }
