@@ -41,14 +41,23 @@ export default class Content {
     return cache[this.collection.name]
   }
 
-  // get a single article, keyed by filename
   async get (filename) {
-    const list = await this.list()
-    return list.find(a => a.filename === filename)
+    return this.getByField('filename', filename)
   }
 
   async getByUrl (url) {
+    return this.getByField('url', url)
+  }
+
+  // get a single article, based on value of a field
+  async getByField (fieldName, value) {
     const list = await this.list()
-    return list.find(a => a.url === url)
+    return list.find(a => a[fieldName] === value)
+  }
+
+  // get all articles that match a filter
+  async getByFilter (filter = () => true) {
+    const list = await this.list()
+    return list.filter(filter)
   }
 }
