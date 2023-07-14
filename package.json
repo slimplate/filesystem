@@ -41,12 +41,11 @@
     "url": "https://github.com/slimplate/filesystem.git"
   },
   "peerDependencies": {
+    "@slimplate/utils": "^0.0.5",
     "glob": "^10.2.7",
     "gray-matter": "^4.0.3",
-    "@slimplate/utils": "latest",
     "match-url-wildcard": "^0.0.4"
   },
-  "dependencies": {},
   "files": [
     "dist/**/*"
   ]
