@@ -23,7 +23,7 @@ export default class Content {
       return cache[this.collection.name]
     }
     const list = (await glob(this.basePath + this.collection.files)).map(f => '/' + f)
-    cache[this.collection.name] = await Promise.all(list.map(f => {
+    cache[this.collection.name] = await Promise.all(list.map(filename => {
       const { data, content, excerpt } = matter(readFileSync(this.basePath + filename, 'utf8'), { excerpt: true })
       data.url = tt(this.collection.url, { ...data, filename, content })
       data.excerpt = excerpt
